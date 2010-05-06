@@ -2,7 +2,7 @@ require 'active_support/core_ext/class/attribute_accessors'
 require 'active_support/core_ext/array'
 require 'active_support/inflector'
 require 'active_support/core_ext/class/inheritable_attributes'
-require 'active_support/core_ext/duplicable'
+require 'active_support/core_ext/object/duplicable'
 class Hash #:nodoc:
   def deep_merge(other_hash)
     self.merge(other_hash) do |key, oldval, newval|
