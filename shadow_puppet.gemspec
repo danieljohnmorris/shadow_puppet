@@ -1,13 +1,13 @@
 Gem::Specification.new do |s|
-  s.name = 'shadow_puppet'
+  s.name = 'danieljohnmorris-shadow_puppet'
   s.description = 'A Ruby Puppet DSL'
   s.summary = 'A Ruby Puppet DSL'
   s.authors = ["Jesse Newland"]
   s.email = ["jesse@railsmachine.com"]
   s.homepage = 'http://railsmachine.github.com/shadow_puppet'
   s.rubyforge_project = 'moonshine'
-  s.version = "0.3.2"
-  s.date = '2009-12-15'
+  s.version = "0.3.3"
+  s.date = '2010-05-28'
 
   s.default_executable = 'shadow_puppet'
   s.executables = ["shadow_puppet"]
