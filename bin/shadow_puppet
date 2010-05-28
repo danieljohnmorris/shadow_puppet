@@ -74,19 +74,20 @@ begin
   opts.parse!
 
   require 'rubygems'
-  require 'active_support/core_ext/string/inflections'
+  require 'active_support'
   require 'active_support/inflector'
-  require 'shadow_puppet'
+  require 'active_support/core_ext/string/inflections'
+  require 'shadow_puppet'  
 
-  unless String.included_modules.include?(ActiveSupport::CoreExtensions::String::Inflections)
-    String.send :include, ActiveSupport::CoreExtensions::String::Inflections
-  end
+  # unless String.included_modules.include?(ActiveSupport::CoreExtensions::String::Inflections)
+  #   String.send :include, ActiveSupport::CoreExtensions::String::Inflections
+  # end
   require 'fileutils'
 
   filename = ARGV[0]
   raise ArgumentError unless filename
-
   klass = File.basename(filename, ".rb")
+  
   require filename
   manifest = klass.classify.constantize.new
   manifest.execute! && exit(0)
