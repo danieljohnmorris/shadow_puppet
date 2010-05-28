@@ -74,9 +74,10 @@ begin
   opts.parse!
 
   require 'rubygems'
-  require 'shadow_puppet'
-  require 'active_support/inflector'
   require 'active_support/core_ext/string/inflections'
+  require 'active_support/inflector'
+  require 'shadow_puppet'
+
   unless String.included_modules.include?(ActiveSupport::CoreExtensions::String::Inflections)
     String.send :include, ActiveSupport::CoreExtensions::String::Inflections
   end
